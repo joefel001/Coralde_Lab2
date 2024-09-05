@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Example {
+
+    //Create a java program that computes the area and volume of cylinder using single inheritance
+    
+    public static void main(String[] args){
+        //volume and surface areanof a cylinder
+        //volume = πr^2*h
+        //area = 2πr^2 + 2πh
+
+        Scanner scnnr = new Scanner(System.in);
+        System.out.println( "Enter the radius of the cylinder: ");
+        double radius = scnnr.nextDouble();
+        System.out.println( "Enter the height of the cylinder: ");
+        double height = scnnr.nextDouble();
+        double volume,surfaceArea;
+
+        volume = Math.PI*(Math.pow(radius, 2))*height;
+        surfaceArea = (2 * Math.PI*radius*height) +(2*Math.PI*Math.pow(radius, 2));
+        System.out.printf("Volume of the cylinder is %.1f", volume );
+        System.out.println();
+        System.out.printf("Area of the cylinder is %.1f", surfaceArea );
+    }
+}
